@@ -13,6 +13,7 @@ import javax.persistence.*;
 public class Activity {
 
     @Id
+    @GeneratedValue
     @Column(name = "ID", unique = true)
     private Long id;
 

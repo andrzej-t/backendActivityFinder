@@ -1,6 +1,7 @@
 package com.myapp.backendactivityfinder.repository;
 
 import com.myapp.backendactivityfinder.domain.Activity;
+import org.hibernate.Session;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,17 +18,17 @@ public class ActivityRepositoryTestSuite {
 
     @Test
     void testActivityRepositorySave() {
-        //Given
-        Activity activity = new Activity(1L, "Test1", "Test", 10, 120, true, true, true, true, true, true, true, true, true, true, true, true);
-        //When
-        activityRepository.save(activity);
-        //Then
-        Long id = activity.getId();
-        Optional<Activity> findActivity = activityRepository.findById(id);
-        assertTrue(findActivity.isPresent());
-
-        //CleanUp
-        activityRepository.deleteById(id);
+//        //Given
+//        Activity activity = new Activity(1L, "Test2", "Test2", 10, 120, true, true, true, true, true, true, true, true, true, true, true, true);
+//        //When
+//        activityRepository.save(activity);
+//        //Then
+//        Long id = activity.getId();
+//        Optional<Activity> findActivity = activityRepository.findById(id);
+//        assertTrue(findActivity.isPresent());
+//
+//        //CleanUp
+//        activityRepository.deleteById(id);
     }
 
 }
