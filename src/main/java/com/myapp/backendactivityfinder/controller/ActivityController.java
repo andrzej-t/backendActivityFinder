@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
-//@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/activities")
+@RequestMapping("/v1")
 @RequiredArgsConstructor
 public class ActivityController {
 
@@ -20,9 +20,25 @@ public class ActivityController {
     @Autowired
     private ActivityMapper activityMapper;
 
-    @GetMapping
+    @GetMapping(value = "/activities")
     public List<ActivityDto> getActivities() {
         List<Activity> activityList = service.getAllActivities();
         return activityMapper.mapToActivityDtoList(activityList);
     }
+
+    @GetMapping(value = "/summer")
+    public List<Activity> getSummerActivities() {
+        return service.getSummerAct();
+    }
+
+    @GetMapping(value = "/winter")
+    public List<Activity> getWinterActivities() {
+        return service.getWinterAct();
+    }
+
+    @GetMapping(value = "/car")
+    public List<Activity> getInCarActivities() {
+        return service.getInCarAct();
+    }
+
 }

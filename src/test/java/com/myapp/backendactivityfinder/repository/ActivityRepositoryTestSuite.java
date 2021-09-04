@@ -19,14 +19,14 @@ public class ActivityRepositoryTestSuite {
     @Test
     void testActivityRepositorySave() {
 //        //Given
-//        Activity activity = new Activity(1L, "Test2", "Test2", 10, 120, true, true, true, true, true, true, true, true, true, true, true, true);
+//        Activity activity = new Activity(null, "CarYes", "Test2", 10, 120, true, true, true, true, true, true, true, true, true, true, true, true);
 //        //When
 //        activityRepository.save(activity);
 //        //Then
 //        Long id = activity.getId();
 //        Optional<Activity> findActivity = activityRepository.findById(id);
 //        assertTrue(findActivity.isPresent());
-//
+
 //        //CleanUp
 //        activityRepository.deleteById(id);
     }

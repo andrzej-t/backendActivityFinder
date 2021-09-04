@@ -1,7 +1,6 @@
 package com.myapp.backendactivityfinder.domain;
 
 import lombok.*;
-
 import javax.persistence.*;
 
 @NoArgsConstructor
@@ -64,5 +63,4 @@ public class Activity {
 
     @Column(name = "FAVOURITE")
     private Boolean favourite;
-
 }
