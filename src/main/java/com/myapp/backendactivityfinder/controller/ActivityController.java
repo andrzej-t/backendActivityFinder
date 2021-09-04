@@ -26,6 +26,41 @@ public class ActivityController {
         return activityMapper.mapToActivityDtoList(activityList);
     }
 
+//    @GetMapping(value = "/min")
+//    public List<Activity> getMinTimeActivities() {
+//        return service.getMinTimeAct();
+//    }
+//
+//    @GetMapping(value = "/max")
+//    public List<Activity> getMaxTimeActivities() {
+//        return service.getMaxTimeAct();
+//    }
+
+    @GetMapping(value = "/one")
+    public List<Activity> getOneActivities() {
+        return service.getOnePersonAct();
+    }
+
+    @GetMapping(value = "/two")
+    public List<Activity> getTwoActivities() {
+        return service.getTwoPeopleAct();
+    }
+
+    @GetMapping(value = "/more")
+    public List<Activity> getMorePeopleActivities() {
+        return service.getMorePeopleAct();
+    }
+
+    @GetMapping(value = "/outdoor")
+    public List<Activity> getOutdoorActivities() {
+        return service.getOutdoorAct();
+    }
+
+    @GetMapping(value = "/indoor")
+    public List<Activity> getIndoorActivities() {
+        return service.getIndoorAct();
+    }
+
     @GetMapping(value = "/summer")
     public List<Activity> getSummerActivities() {
         return service.getSummerAct();
@@ -41,4 +76,23 @@ public class ActivityController {
         return service.getInCarAct();
     }
 
+    @GetMapping(value = "/educational")
+    public List<Activity> getEducationalActivities() {
+        return service.getEducationalAct();
+    }
+
+    @GetMapping(value = "/art")
+    public List<Activity> getArtActivities() {
+        return service.getArtAct();
+    }
+
+    @GetMapping(value = "/motion")
+    public List<Activity> getMotionActivities() {
+        return service.getMotionAct();
+    }
+
+    @GetMapping(value = "/favourite")
+    public List<Activity> getFavouriteActivities() {
+        return service.getFavouriteAct();
+    }
 }

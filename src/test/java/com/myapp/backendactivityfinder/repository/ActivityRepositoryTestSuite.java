@@ -10,14 +10,14 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@SpringBootTest
+//@SpringBootTest
 public class ActivityRepositoryTestSuite {
+//
+//    @Autowired
+//    private ActivityRepository activityRepository;
 
-    @Autowired
-    private ActivityRepository activityRepository;
-
-    @Test
-    void testActivityRepositorySave() {
+////    @Test
+//    void testActivityRepositorySave() {
 //        //Given
 //        Activity activity = new Activity(null, "CarYes", "Test2", 10, 120, true, true, true, true, true, true, true, true, true, true, true, true);
 //        //When
@@ -29,6 +29,6 @@ public class ActivityRepositoryTestSuite {
 
 //        //CleanUp
 //        activityRepository.deleteById(id);
-    }
+//    }
 
 }
