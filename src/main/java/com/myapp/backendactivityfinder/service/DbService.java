@@ -12,9 +12,11 @@ public class DbService {
 
     private final ActivityRepository repository;
 
-//    public List<Activity> getMinTimeAct() { return repository.findByMinTime();}
-//
-//    public List<Activity> getMaxTimeAct() { return repository.findByMaxTime();}
+    public List<Activity> getNameAct() { return repository.findByName(null);}
+
+    public List<Activity> getMinTimeAct() { return repository.findByMinTime(null);}
+
+    public List<Activity> getMaxTimeAct() { return repository.findByMaxTime(null);}
 
     public List<Activity> getOnePersonAct() { return repository.findByOnePerson(true);}
 

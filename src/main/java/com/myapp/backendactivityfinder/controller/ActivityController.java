@@ -26,15 +26,20 @@ public class ActivityController {
         return activityMapper.mapToActivityDtoList(activityList);
     }
 
-//    @GetMapping(value = "/min")
-//    public List<Activity> getMinTimeActivities() {
-//        return service.getMinTimeAct();
-//    }
-//
-//    @GetMapping(value = "/max")
-//    public List<Activity> getMaxTimeActivities() {
-//        return service.getMaxTimeAct();
-//    }
+    @GetMapping(value = "/name")
+    public List<Activity> getNameActivities() {
+        return service.getNameAct();
+    }
+
+    @GetMapping(value = "/min")
+    public List<Activity> getMinTimeActivities() {
+        return service.getMinTimeAct();
+    }
+
+    @GetMapping(value = "/max")
+    public List<Activity> getMaxTimeActivities() {
+        return service.getMaxTimeAct();
+    }
 
     @GetMapping(value = "/one")
     public List<Activity> getOneActivities() {
