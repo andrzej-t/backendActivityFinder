@@ -10,17 +10,18 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-//@SpringBootTest
+@SpringBootTest
 public class ActivityRepositoryTestSuite {
 
 //    @Autowired
-//    private ActivityRepository activityRepository;
+    private ActivityRepository activityRepository;
 
 //    @Test
 //    void testActivityRepositorySave() {
-//        //Given
-//        Activity activity = new Activity(null, "rTestX", "Test2", 10, 120, true, true, true, true, true, true, true, true, true, true, true, true);
-//
+        //Given
+//        Activity activity = new Activity(null, "Edukacyjne nie", "Test2", 10, 120, true, true, true, true, true, true, true, true, false, false, false, true);
+
+//        Activity activity = new Activity(null, "Zima Nie", "Test2", 10, 120, true, true, true, true, true, true, false, true, true, true, true, true);
 //        //When
 //        activityRepository.save(activity);
 ////        //Then
