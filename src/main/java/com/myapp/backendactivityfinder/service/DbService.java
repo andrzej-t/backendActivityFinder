@@ -5,6 +5,7 @@ import com.myapp.backendactivityfinder.repository.ActivityRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Random;
 
 @Service
 @RequiredArgsConstructor

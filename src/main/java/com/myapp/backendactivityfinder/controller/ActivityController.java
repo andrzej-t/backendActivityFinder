@@ -2,6 +2,7 @@ package com.myapp.backendactivityfinder.controller;
 
 import com.myapp.backendactivityfinder.domain.Activity;
 import com.myapp.backendactivityfinder.domain.ActivityDto;
+import com.myapp.backendactivityfinder.logic.Logic;
 import com.myapp.backendactivityfinder.mapper.ActivityMapper;
 import com.myapp.backendactivityfinder.service.DbService;
 import lombok.RequiredArgsConstructor;
@@ -19,12 +20,17 @@ public class ActivityController {
     private DbService service;
     @Autowired
     private ActivityMapper activityMapper;
+    @Autowired
+    private Logic logic;
 
     @GetMapping(value = "/activities")
     public List<ActivityDto> getActivities() {
         List<Activity> activityList = service.getAllActivities();
         return activityMapper.mapToActivityDtoList(activityList);
     }
+
+    @GetMapping(value = "/random")
+    public List<Activity> getRandomActivities() { return logic.getRandomAct(); }
 
     @GetMapping(value = "/name")
     public List<Activity> getNameActivities() {
