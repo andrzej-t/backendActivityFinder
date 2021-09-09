@@ -5,13 +5,20 @@ import com.myapp.backendactivityfinder.repository.ActivityRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.Random;
 
 @Service
 @RequiredArgsConstructor
 public class DbService {
 
     private final ActivityRepository repository;
+
+    public Activity saveActivity(final Activity activity) {
+        return repository.save(activity);
+    }
+
+    public void deleteActivities() {
+        repository.deleteAll();
+    }
 
     public List<Activity> getNameAct() { return repository.findByName(null);}
 

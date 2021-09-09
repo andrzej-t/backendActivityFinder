@@ -2,12 +2,16 @@ package com.myapp.backendactivityfinder.controller;
 
 import com.myapp.backendactivityfinder.domain.Activity;
 import com.myapp.backendactivityfinder.domain.ActivityDto;
+import com.myapp.backendactivityfinder.exception.ActivitiesNotFoundException;
 import com.myapp.backendactivityfinder.logic.Logic;
 import com.myapp.backendactivityfinder.mapper.ActivityMapper;
 import com.myapp.backendactivityfinder.service.DbService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
+
 import java.util.List;
 
 @CrossOrigin(origins = "*")
@@ -27,6 +31,28 @@ public class ActivityController {
     public List<ActivityDto> getActivities() {
         List<Activity> activityList = service.getAllActivities();
         return activityMapper.mapToActivityDtoList(activityList);
+    }
+
+    @PutMapping(value = "/activity", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ActivityDto updateActivity(@RequestBody ActivityDto activityDto) {
+        Activity activity = activityMapper.mapToActivity(activityDto);
+        Activity savedActivity = service.saveActivity(activity);
+        return activityMapper.mapToActivityDto(savedActivity);
+    }
+
+    @PostMapping(value = "/activity", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void createActivity(@RequestBody ActivityDto activityDto) {
+        Activity activity = activityMapper.mapToActivity(activityDto);
+        service.saveActivity(activity);
+    }
+
+    @DeleteMapping(value = "/activities")
+    public void deleteActivities() throws ActivitiesNotFoundException {
+        if (!service.getAllActivities().isEmpty()) {
+            service.deleteActivities();
+        } else {
+            throw new ActivitiesNotFoundException();
+        }
     }
 
     @GetMapping(value = "/random")
@@ -106,4 +132,5 @@ public class ActivityController {
     public List<Activity> getFavouriteActivities() {
         return service.getFavouriteAct();
     }
+
 }

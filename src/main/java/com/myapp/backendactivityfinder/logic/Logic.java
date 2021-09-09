@@ -4,7 +4,6 @@ import com.myapp.backendactivityfinder.domain.Activity;
 import com.myapp.backendactivityfinder.service.DbService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
