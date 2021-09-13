@@ -15,8 +15,8 @@ import java.util.HashSet;
 @Setter
 @Entity
 @Table(
-        name = "ACTIVITY",
-        uniqueConstraints = {@UniqueConstraint(columnNames = {"NAME", "DESCRIPTION", "MIN_TIME", "MAX_TIME", "ONE", "TWO", "MORE", "OUTDOOR", "INDOOR", "SUMMER", "WINTER", "IN_CAR", "EDUCATIONAL", "ART", "MOTION", "FAVOURITE" })}
+        name = "ACTIVITY"
+//        uniqueConstraints = {@UniqueConstraint(columnNames = {"NAME", "DESCRIPTION", "MIN_TIME", "MAX_TIME", "ONE", "TWO", "MORE", "OUTDOOR", "INDOOR", "SUMMER", "WINTER", "IN_CAR", "EDUCATIONAL", "ART", "MOTION", "FAVOURITE" })}
 )
 public class Activity {
 

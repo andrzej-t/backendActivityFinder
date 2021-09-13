@@ -8,11 +8,12 @@ import com.myapp.backendactivityfinder.mapper.ActivityMapper;
 import com.myapp.backendactivityfinder.service.DbService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
-
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -33,17 +34,32 @@ public class ActivityController {
         return activityMapper.mapToActivityDtoList(activityList);
     }
 
-    @PutMapping(value = "/activity", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/activity")
     public ActivityDto updateActivity(@RequestBody ActivityDto activityDto) {
         Activity activity = activityMapper.mapToActivity(activityDto);
         Activity savedActivity = service.saveActivity(activity);
         return activityMapper.mapToActivityDto(savedActivity);
     }
 
+    @PutMapping(value = "/update")
+    public ResponseEntity<ActivityDto> update(@RequestBody ActivityDto activity) {
+        Optional<Activity> byId = service.update(activity);
+        return byId.map(value -> new ResponseEntity<>(activityMapper.mapToActivityDto(value), HttpStatus.OK))
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
     @PostMapping(value = "/activity", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void createActivity(@RequestBody ActivityDto activityDto) {
         Activity activity = activityMapper.mapToActivity(activityDto);
         service.saveActivity(activity);
+    }
+
+    @GetMapping(value = "/activity/{id}")
+    public ResponseEntity<ActivityDto> getById(@PathVariable Long id) {
+        Optional<Activity> activityById = service.findById(id);
+        return activityById.map(activity ->
+                new ResponseEntity<>(activityMapper.mapToActivityDto(activity),
+                        HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
     @DeleteMapping(value = "/activities")
