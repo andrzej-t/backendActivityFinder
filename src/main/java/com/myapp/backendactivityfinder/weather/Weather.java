@@ -14,5 +14,5 @@ public class Weather {
 
     private String suma_opadu;
     
-    private String cicnienie;
+    private String cisnienie;
 }

@@ -148,5 +148,4 @@ public class ActivityController {
     public List<Activity> getFavouriteActivities() {
         return service.getFavouriteAct();
     }
-
 }

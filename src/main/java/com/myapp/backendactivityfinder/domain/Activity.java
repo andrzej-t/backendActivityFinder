@@ -1,23 +1,14 @@
 package com.myapp.backendactivityfinder.domain;
 
 import lombok.*;
-import org.hibernate.annotations.CollectionType;
-import org.hibernate.mapping.Set;
-import org.springframework.data.crossstore.HashMapChangeSet;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.HashSet;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Entity
-@Table(
-        name = "ACTIVITY"
-//        uniqueConstraints = {@UniqueConstraint(columnNames = {"NAME", "DESCRIPTION", "MIN_TIME", "MAX_TIME", "ONE", "TWO", "MORE", "OUTDOOR", "INDOOR", "SUMMER", "WINTER", "IN_CAR", "EDUCATIONAL", "ART", "MOTION", "FAVOURITE" })}
-)
 public class Activity {
 
     @Id

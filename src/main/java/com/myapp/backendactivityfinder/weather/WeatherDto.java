@@ -21,5 +21,5 @@ public class WeatherDto {
     private String suma_opadu;
 
     @JsonProperty("cisnienie")
-    private String cicnienie;
+    private String cisnienie;
 }

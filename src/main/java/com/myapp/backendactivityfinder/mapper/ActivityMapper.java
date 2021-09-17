@@ -3,7 +3,6 @@ package com.myapp.backendactivityfinder.mapper;
 import com.myapp.backendactivityfinder.domain.Activity;
 import com.myapp.backendactivityfinder.domain.ActivityDto;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
 

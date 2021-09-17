@@ -12,9 +12,12 @@ public class WeatherController {
 
     @Autowired
     WeatherClient weatherClient;
+    @Autowired
+    WeatherMapper weatherMapper;
 
-    @GetMapping(value = "/get/{city}")
-    public WeatherDto getWeather(@PathVariable String city) {
-        return weatherClient.getWeather(city);
+    @GetMapping(value = "/get/{stacja}")
+    public Weather getWeather(@PathVariable String stacja) {
+
+        return weatherMapper.mapToWeather(weatherClient.getWeather(stacja));
     }
 }

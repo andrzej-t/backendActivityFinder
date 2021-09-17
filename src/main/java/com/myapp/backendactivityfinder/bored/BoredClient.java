@@ -1,30 +1,30 @@
-package com.myapp.backendactivityfinder.weather;
+package com.myapp.backendactivityfinder.bored;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 
-@Service
+@Component
 @RequiredArgsConstructor
 @Slf4j
-public class WeatherClient {
+public class BoredClient {
 
     private RestTemplate restTemplate = new RestTemplate();
 
     @Autowired
-    WeatherConfig weatherConfig;
+    BoredConfig boredConfig;
 
-    public WeatherDto getWeather(String stacja) {
-        URI url = UriComponentsBuilder.fromHttpUrl(weatherConfig.getWeatherApiEndpoint() + "/station/" + stacja)
+    public BoredDto getBored() {
+        URI url = UriComponentsBuilder.fromHttpUrl(boredConfig.getBoredApiEndpoint())
                 .build()
                 .encode()
                 .toUri();
 
-        WeatherDto boardsResponse = restTemplate.getForObject(url, WeatherDto.class);
-        return boardsResponse;
+        BoredDto response = restTemplate.getForObject(url, BoredDto.class);
+        return response;
     }
 }
