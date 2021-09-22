@@ -144,8 +144,8 @@ public class ActivityController {
         return service.getMotionAct();
     }
 
-    @GetMapping(value = "/favourite")
-    public List<Activity> getFavouriteActivities() {
-        return service.getFavouriteAct();
+    @GetMapping(value = "/newest")
+    public List<Activity> getNewestActivities() {
+        return service.getNewestAct();
     }
 }

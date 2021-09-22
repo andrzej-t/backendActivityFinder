@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -82,6 +83,17 @@ public class DbService {
 
     public List<Activity> getMotionAct() { return repository.findByMotion(true);}
 
-    public List<Activity> getFavouriteAct() { return repository.findByFavourite(true);}
+    public List<Activity> getNewestAct() {
+        List<Activity> all = repository.findAll();
+        List<Activity> newest = new ArrayList<>();
+
+        newest.add(all.get(all.size()-1));
+        newest.add(all.get(all.size()-2));
+        newest.add(all.get(all.size()-3));
+        newest.add(all.get(all.size()-4));
+        newest.add(all.get(all.size()-5));
+
+        return newest;
+    }
 
 }

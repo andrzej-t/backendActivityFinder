@@ -13,71 +13,71 @@ public class Activity {
 
     @Id
     @GeneratedValue
-    @Column(name = "ID", unique = true)
+    @Column(name = "id", unique = true)
     @NotNull
     private Long id;
 
-    @Column(name = "NAME", unique = true)
+    @Column(name = "name", unique = true)
     @NotNull
     private String name;
 
-    @Column(name = "DESCRIPTION")
+    @Column(name = "description")
     @NotNull
     private String description;
 
-    @Column(name = "MIN_TIME")
+    @Column(name = "min_time")
     @NotNull
     private Integer minTime;
 
-    @Column(name = "MAX_TIME")
+    @Column(name = "max_time")
     @NotNull
     private Integer maxTime;
 
-    @Column(name = "ONE")
+    @Column(name = "one")
     @NotNull
     private Boolean onePerson;
 
-    @Column(name = "TWO")
+    @Column(name = "two")
     @NotNull
     private Boolean twoPeople;
 
-    @Column(name = "MORE")
+    @Column(name = "more")
     @NotNull
     private Boolean morePeople;
 
-    @Column(name = "OUTDOOR")
+    @Column(name = "outdoor")
     @NotNull
     private Boolean outdoor;
 
-    @Column(name = "INDOOR")
+    @Column(name = "indoor")
     @NotNull
     private Boolean indoor;
 
-    @Column(name = "SUMMER")
+    @Column(name = "summer")
     @NotNull
     private Boolean summer;
 
-    @Column(name = "WINTER")
+    @Column(name = "winter")
     @NotNull
     private Boolean winter;
 
-    @Column(name = "IN_CAR")
+    @Column(name = "in_car")
     @NotNull
     private Boolean inCar;
 
-    @Column(name = "EDUCATIONAL")
+    @Column(name = "educational")
     @NotNull
     private Boolean educational;
 
-    @Column(name = "ART")
+    @Column(name = "art")
     @NotNull
     private Boolean art;
 
-    @Column(name = "MOTION")
+    @Column(name = "motion")
     @NotNull
     private Boolean motion;
 
-    @Column(name = "FAVOURITE")
+    @Column(name = "favourite")
     @NotNull
     private Boolean favourite;
 }
