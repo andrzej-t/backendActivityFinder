@@ -1,5 +1,8 @@
-package com.myapp.backendactivityfinder.weather;
+package com.myapp.backendactivityfinder.controller;
 
+import com.myapp.backendactivityfinder.domain.Weather;
+import com.myapp.backendactivityfinder.weather.WeatherClient;
+import com.myapp.backendactivityfinder.mapper.WeatherMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

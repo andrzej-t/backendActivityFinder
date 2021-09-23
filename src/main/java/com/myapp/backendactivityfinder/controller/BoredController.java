@@ -1,5 +1,8 @@
-package com.myapp.backendactivityfinder.bored;
+package com.myapp.backendactivityfinder.controller;
 
+import com.myapp.backendactivityfinder.bored.BoredClient;
+import com.myapp.backendactivityfinder.mapper.BoredMapper;
+import com.myapp.backendactivityfinder.domain.Bored;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

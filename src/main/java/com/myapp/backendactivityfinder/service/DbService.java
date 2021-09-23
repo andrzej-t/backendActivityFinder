@@ -6,10 +6,10 @@ import com.myapp.backendactivityfinder.repository.ActivityRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @Service
 @RequiredArgsConstructor
@@ -94,6 +94,13 @@ public class DbService {
         newest.add(all.get(all.size()-5));
 
         return newest;
+    }
+
+    public List<Activity> getRandomAct() {
+        Random random = new Random();
+        List<Activity> randomList = new ArrayList<>();
+        randomList.add(getAllActivities().get(random.nextInt(getAllActivities().size())));
+        return randomList;
     }
 
 }

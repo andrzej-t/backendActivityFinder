@@ -1,4 +1,4 @@
-package com.myapp.backendactivityfinder.bored;
+package com.myapp.backendactivityfinder.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
