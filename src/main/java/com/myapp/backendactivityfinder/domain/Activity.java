@@ -9,6 +9,7 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @Entity
+@Builder
 public class Activity {
 
     @Id
