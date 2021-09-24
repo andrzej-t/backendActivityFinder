@@ -13,7 +13,7 @@ import java.util.Random;
 
 @Service
 @RequiredArgsConstructor
-public class DbService {
+public class ActivityService {
 
     private final ActivityRepository repository;
 
