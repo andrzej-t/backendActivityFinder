@@ -25,7 +25,6 @@ public class BoredClient {
                 .encode()
                 .toUri();
 
-        BoredDto response = restTemplate.getForObject(url, BoredDto.class);
-        return response;
+        return restTemplate.getForObject(url, BoredDto.class);
     }
 }

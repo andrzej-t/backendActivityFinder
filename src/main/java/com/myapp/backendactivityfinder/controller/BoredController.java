@@ -23,7 +23,7 @@ public class BoredController {
     BoredMapper boredMapper;
 
     @PostMapping(value = "/show")
-    public Bored showNameday() {
+    public Bored showBored() {
         return boredMapper.mapToBored(boredClient.getBored());
     }
 }
