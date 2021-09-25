@@ -1,13 +1,10 @@
 package com.myapp.backendactivityfinder.repository;
 
 import com.myapp.backendactivityfinder.domain.Activity;
-import org.hibernate.Session;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import java.util.Optional;
-
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
@@ -18,6 +15,7 @@ public class ActivityRepositoryTestSuite {
 
     @Test
     void testActivityRepositorySave() {
+
         //Given
         Activity activity = new Activity(null, "Edukacyjne nie", "Test2", 10, 120, true, true, true, true, true, true, true, true, false, false, false, true);
 
@@ -31,5 +29,4 @@ public class ActivityRepositoryTestSuite {
         //CleanUp
         activityRepository.deleteById(id);
     }
-
 }
