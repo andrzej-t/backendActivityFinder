@@ -495,5 +495,35 @@ public class ActivityControllerTestSuite {
                 .andExpect(jsonPath("$[0].favourite", is(true)));
     }
 
+    @Test
+    public void testShouldGetNewestActivities() throws Exception {
 
+        //Given
+        List<Activity> activityList = new ArrayList<>();
+        activityList.add(new Activity(1L, "testName1", "testDescription1", 10, 60, true, true, true, true, true, true, true, true, true, true, true, true));
+        when(activityFacade.showNewestAct()).thenReturn(activityList);
+
+        //When & Then
+        mockMvc.perform(get("/v1/newest")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().is(200))
+                .andExpect(jsonPath("$", hasSize(1)))
+                .andExpect(jsonPath("$[0].id", is(1)))
+                .andExpect(jsonPath("$[0].name", is("testName1")))
+                .andExpect(jsonPath("$[0].description", is("testDescription1")))
+                .andExpect(jsonPath("$[0].minTime", is(10)))
+                .andExpect(jsonPath("$[0].maxTime", is(60)))
+                .andExpect(jsonPath("$[0].onePerson", is(true)))
+                .andExpect(jsonPath("$[0].twoPeople", is(true)))
+                .andExpect(jsonPath("$[0].morePeople", is(true)))
+                .andExpect(jsonPath("$[0].outdoor", is(true)))
+                .andExpect(jsonPath("$[0].indoor", is(true)))
+                .andExpect(jsonPath("$[0].summer", is(true)))
+                .andExpect(jsonPath("$[0].winter", is(true)))
+                .andExpect(jsonPath("$[0].inCar", is(true)))
+                .andExpect(jsonPath("$[0].educational", is(true)))
+                .andExpect(jsonPath("$[0].art", is(true)))
+                .andExpect(jsonPath("$[0].motion", is(true)))
+                .andExpect(jsonPath("$[0].favourite", is(true)));
+    }
 }

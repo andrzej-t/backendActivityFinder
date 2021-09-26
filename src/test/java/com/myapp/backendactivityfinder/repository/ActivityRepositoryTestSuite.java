@@ -14,13 +14,14 @@ public class ActivityRepositoryTestSuite {
     private ActivityRepository activityRepository;
 
     @Test
-    void testActivityRepositorySave() {
+    public void testActivityRepositorySave() {
 
         //Given
         Activity activity = new Activity(null, "Edukacyjne nie", "Test2", 10, 120, true, true, true, true, true, true, true, true, false, false, false, true);
 
         //When
         activityRepository.save(activity);
+
         //Then
         Long id = activity.getId();
         Optional<Activity> findActivity = activityRepository.findById(id);

@@ -23,7 +23,7 @@ public class StatisticsController {
     private StatisticsMapper statisticsMapper;
 
     @PostMapping(value = "/insert", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void increaseValue(@RequestBody StatisticsDto statisticsDto) {
+    public void saveValue(@RequestBody StatisticsDto statisticsDto) {
         Statistics statistics = statisticsMapper.mapToStatistics(statisticsDto);
         statService.saveStatistics(statistics);
     }

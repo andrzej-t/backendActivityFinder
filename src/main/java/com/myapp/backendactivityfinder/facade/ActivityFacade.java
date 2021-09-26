@@ -35,10 +35,6 @@ public class ActivityFacade {
         return activityMapper.mapToActivityDto(savedActivity);
     }
 
-    public List<Activity> showNewestAct() {
-        return activityService.getNewestAct();
-    }
-
     public ResponseEntity<ActivityDto> refresh(@RequestBody ActivityDto activity) {
         Optional<Activity> byId = activityService.update(activity);
         return byId.map(value -> new ResponseEntity<>(activityMapper.mapToActivityDto(value), HttpStatus.OK))
@@ -64,6 +60,8 @@ public class ActivityFacade {
             throw new ActivitiesNotFoundException();
         }
     }
+
+    public List<Activity> showNewestAct() { return activityService.getNewestAct(); }
 
     public List<Activity> showRandomAct() { return activityService.getRandomAct(); }
 
