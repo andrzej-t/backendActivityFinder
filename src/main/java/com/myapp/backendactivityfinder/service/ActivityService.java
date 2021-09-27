@@ -102,5 +102,4 @@ public class ActivityService {
         randomList.add(getAllActivities().get(random.nextInt(getAllActivities().size())));
         return randomList;
     }
-
 }

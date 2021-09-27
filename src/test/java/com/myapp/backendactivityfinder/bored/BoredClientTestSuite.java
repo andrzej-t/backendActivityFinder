@@ -7,10 +7,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.web.client.RestTemplate;
-
 import java.net.URI;
 import java.net.URISyntaxException;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
@@ -31,7 +29,6 @@ public class BoredClientTestSuite {
 
         //Given
         when(boredConfig.getBoredApiEndpoint()).thenReturn("https://test.com");
-
         URI url = new URI("https://test.com");
         BoredDto boredDto = new BoredDto("Test my application");
         when(restTemplate.getForObject(url, BoredDto.class)).thenReturn(boredDto);

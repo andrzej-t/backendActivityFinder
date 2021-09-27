@@ -46,5 +46,4 @@ public class StatisticsController {
 
     @GetMapping(value = "/likes")
     public Long showLikes() { return statService.getLikes(); }
-
 }

@@ -9,5 +9,4 @@ class BackendActivityFinderApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }

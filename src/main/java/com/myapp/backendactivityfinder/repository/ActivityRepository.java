@@ -41,6 +41,4 @@ public interface ActivityRepository extends CrudRepository<Activity, Long> {
     List<Activity> findByArt(Boolean art);
 
     List<Activity> findByMotion(Boolean motion);
-
-    List<Activity> findByFavourite(Boolean favourite);
 }
