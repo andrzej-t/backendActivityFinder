@@ -1,6 +1,5 @@
-id,art,description,educational,favourite,in_car,indoor,max_time,min_time,more,motion,name,one,outdoor,summer,two,winter
-259,false,"Pływanie na krytym basenie. Przydatne: strój, klapki, okulary, ręcznik, szampon, karnet",true,false,false,true,180,120,true,true,Basen kryty,true,false,true,true,true
-260,false,"Pływanie na krytym basenie. Przydatne: strój, klapki, okulary, ręcznik, szampon, karnet",true,false,false,false,300,120,true,true,Basen odkryty,true,true,true,true,false
+259,false,"Pływanie na krytym basenie. Przydatne: strój, klapki, okulary, ręcznik, szampon, karnet.",false,false,false,true,180,60,true,true,Basen kryty,false,false,true,true,true
+260,false,"Pływanie na odkrytym basenie. Przydatne: strój, klapki, okulary, ręcznik, szampon, karnet.",false,false,false,false,180,60,true,true,Basen odkryty,false,true,true,true,true
 261,true,Uczestnik za pomocą mimiki i mowy ciała musi przedstawić zgadywane hasło. Nie może się przy tym odzywać. Przydatne: karteczki z hasłami,true,false,false,true,60,15,true,false,Kalambury pokazywane,false,true,true,true,true
 262,false,Uczestnik przedstawia hasło za pomocą słów. Przydatne: karteczki z hasłami.,true,false,false,true,60,15,true,false,Kalambury mówione,false,true,true,true,true
 263,true,"Uczestnik musi przedstawić hasło graficznie. Podczas rysowania nie może nic mówić. Przydatne: karteczki z hasłami, pisak, kartki papieru, taśma do ściany lub stojak na papier (flipchart).",true,false,false,true,60,15,true,false,Kalambury rysowane,false,true,true,true,true
