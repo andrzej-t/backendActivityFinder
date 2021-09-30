@@ -32,8 +32,8 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
 
-    implementation 'mysql:mysql-connector-java:8.0.25'
-//    implementation 'org.postgresql:postgresql'
+//    implementation 'mysql:mysql-connector-java:8.0.25'
+    implementation 'org.postgresql:postgresql'
 
     implementation 'com.google.code.gson:gson:2.8.8'
 }
