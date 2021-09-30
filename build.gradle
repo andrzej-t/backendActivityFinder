@@ -8,7 +8,7 @@ plugins {
 jar {
     manifest {
         attributes(
-                'Main-Class': 'com.myapp.backendactivityfinder'
+                'Main-Class': 'com.myapp.backendactivityfinder.BackendActivityFinderApplication'
         )
     }
 }
