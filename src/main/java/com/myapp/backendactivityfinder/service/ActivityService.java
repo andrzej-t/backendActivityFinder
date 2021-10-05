@@ -25,6 +25,7 @@ public class ActivityService {
         return repository.findById(id);
     }
 
+    @SuppressWarnings("OptionalGetWithoutIsPresent")
     @Transactional
     public Optional<Activity> update(ActivityDto activity) {
         Optional<Activity> byId = repository.findById(activity.getId());

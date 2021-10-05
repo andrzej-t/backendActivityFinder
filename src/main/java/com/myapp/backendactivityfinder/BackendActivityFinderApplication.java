@@ -6,8 +6,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-//public class BackendActivityFinderApplication extends SpringBootServletInitializer {
-public class BackendActivityFinderApplication {
+public class BackendActivityFinderApplication extends SpringBootServletInitializer {
+//public class BackendActivityFinderApplication {
 
     public static void main(String[] args) {
 
