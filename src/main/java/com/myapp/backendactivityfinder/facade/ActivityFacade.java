@@ -92,4 +92,6 @@ public class ActivityFacade {
     public List<Activity> showArtAct() { return activityService.getArtAct(); }
 
     public List<Activity> showMotionAct() { return activityService.getMotionAct(); }
+
+    public void resetFilters() { activityService.clearFilters(); }
 }

@@ -107,4 +107,7 @@ public class ActivityController {
 
     @GetMapping(value = "/newest")
     public List<Activity> getNewestActivities() { return activityFacade.showNewestAct(); }
+
+    @PutMapping(value = "/reset")
+    public void changeFilters() { activityFacade.resetFilters(); }
 }
