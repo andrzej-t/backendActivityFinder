@@ -1,5 +1,5 @@
 ## How to start "Activity Finder" application
-* You can watch version deployed on heroku server: https://calm-harbor-79659.herokuapp.com/
+* You can watch version deployed on heroku server: https://activitiesfinder.herokuapp.com/
 
 or:
 
